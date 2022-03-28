@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --color-dark: #242424;
+  --color-white: #ffffff;
+  --color-ligthblue: #00c2ff;
+  --color-fucsia: #ff00f5;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -11,8 +18,8 @@ html {
 }
 
 body {
-  background-color: #242424;
-  color: #2200af;
+  background-color: var(--color-dark);
+  color: var(--color-white);
   overflow: hidden;
   font-family: "Poppins", sans-serif;
 }
@@ -45,4 +52,41 @@ body::after {
     rgba(255, 0, 245, 0.16) 0%,
     rgba(255, 0, 245, 0) 100%
   );
+}
+
+@media screen and (min-width: 450px) {
+  body::before,
+  body::after {
+    width: 37rem;
+    height: 37rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  body::before,
+  body::after {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body::before,
+  body::after {
+    width: 44rem;
+    height: 44rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body::before,
+  body::after {
+    width: 55rem;
+    height: 55rem;
+  }
+  body::after {
+    right: -11rem;
+    bottom: -11rem;
+  }
+  body::before {
+    left: -11rem;
+    top: -11rem;
+  }
 }

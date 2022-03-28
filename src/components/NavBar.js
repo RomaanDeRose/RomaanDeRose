@@ -13,45 +13,79 @@ function NavBar() {
   };
 
   return (
-    <div className="navbar">
-      <div className="navbar-mobile">
-        <FontAwesomeIcon
-          icon={faBars}
-          className="icon-menu"
-          onClick={toggleNavMenu}
-        />
-        <nav className={navMenu ? "nav-mobile nav-active" : "nav-mobile"}>
-          <NavLink className="a" to="/" onClick={toggleNavMenu}>
-            Home
-          </NavLink>
-          <NavLink className="a" to="/about" onClick={toggleNavMenu}>
-            About
-          </NavLink>
-          <NavLink className="a" to="/projects" onClick={toggleNavMenu}>
-            Projects
-          </NavLink>
-          <NavLink className="a" to="/contact" onClick={toggleNavMenu}>
-            Contact
-          </NavLink>
-          <div className="social">
-            <a
-              href="https://github.com/RomaanDeRose"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon className="social-icon" icon={faGithub} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/roman-de-rose-frontend/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
-            </a>
-          </div>
-        </nav>
+    <nav className="navbar">
+      <FontAwesomeIcon
+        icon={faBars}
+        className="icon-menu"
+        onClick={toggleNavMenu}
+      />
+      <div className="menu-bar">
+        <ul>
+          <li>
+            <NavLink to="/">Inicio</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">Sobre mi</NavLink>
+          </li>
+          <li>
+            <NavLink to="/projects">Proyectos</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contacto</NavLink>
+          </li>
+        </ul>
       </div>
-    </div>
+      <div className="socialMedia">
+        <a
+          href="https://github.com/RomaanDeRose"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="socialMedia__link"
+        >
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/roman-de-rose-frontend/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="socialMedia__link"
+        >
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+      </div>
+      <div className={navMenu ? "menu-mobile mobile" : "menu-mobile"}>
+        <NavLink to="/" onClick={toggleNavMenu}>
+          Inicio
+        </NavLink>
+        <NavLink to="/about" onClick={toggleNavMenu}>
+          Sobre mi
+        </NavLink>
+        <NavLink to="/projects" onClick={toggleNavMenu}>
+          Proyectos
+        </NavLink>
+        <NavLink to="/contact" onClick={toggleNavMenu}>
+          Contacto
+        </NavLink>
+        <div className="socialMedia">
+          <a
+            href="https://github.com/RomaanDeRose"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="socialMedia__link"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/roman-de-rose-frontend/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="socialMedia__link"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </div>
+      </div>
+    </nav>
   );
 }
 
