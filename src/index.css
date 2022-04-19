@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --color-dark: #242424;
+  --color-dark: #282828;
   --color-white: #ffffff;
-  --color-ligthblue: #00c2ff;
-  --color-fucsia: #ff00f5;
+  --color-yellow: #f7df1e;
+  --color-blue: #004cdd;
+  --color-ligthblue: #3b7eff;
 }
 
 * {
@@ -15,78 +16,13 @@
 
 html {
   font-size: 62.5%;
+  background: url("./assets/fondo-wave.svg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
-  background-color: var(--color-dark);
-  color: var(--color-white);
-  overflow: hidden;
   font-family: "Poppins", sans-serif;
-}
-body::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: -8rem;
-  left: -8rem;
-  width: 34rem;
-  height: 34rem;
-  border-radius: 50%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(0, 194, 255, 0.16) 0%,
-    rgba(0, 194, 255, 0) 100%
-  );
-}
-body::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: -8rem;
-  right: -8rem;
-  width: 34rem;
-  height: 34rem;
-  border-radius: 50%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(255, 0, 245, 0.16) 0%,
-    rgba(255, 0, 245, 0) 100%
-  );
-}
-
-@media screen and (min-width: 450px) {
-  body::before,
-  body::after {
-    width: 37rem;
-    height: 37rem;
-  }
-}
-@media screen and (min-width: 700px) {
-  body::before,
-  body::after {
-    width: 40rem;
-    height: 40rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body::before,
-  body::after {
-    width: 44rem;
-    height: 44rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body::before,
-  body::after {
-    width: 55rem;
-    height: 55rem;
-  }
-  body::after {
-    right: -11rem;
-    bottom: -11rem;
-  }
-  body::before {
-    left: -11rem;
-    top: -11rem;
-  }
 }
