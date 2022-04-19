@@ -46,10 +46,12 @@ function Home() {
         <p className="home-text-description">Frontend Developer</p>
         <div className="home-text-descriptionPersonal">
           <p>
-            <span>icono</span> La Plata, Buenos Aires
+            <span className="iconify" data-icon="flag:ar-4x3"></span> La Plata,
+            Buenos Aires
           </p>
           <p>
-            <span>icono</span> romandr3@gmail.com
+            <span className="iconify" data-icon="emojione-v1:e-mail"></span>{" "}
+            romandr3@gmail.com
           </p>
         </div>
         <Link to="/projects">proyectos</Link>
