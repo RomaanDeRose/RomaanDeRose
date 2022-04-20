@@ -16,30 +16,10 @@ function Home() {
           alt="roman de rose frontend"
           className="home-article__img"
         />
-        <img
-          src={js}
-          alt=""
-          className="img-skills"
-          style={{ top: "10px", left: "22px" }}
-        />
-        <img
-          src={sass}
-          alt=""
-          className="img-skills"
-          style={{ top: "55px", left: "214px" }}
-        />
-        <img
-          src={react}
-          alt=""
-          className="img-skills"
-          style={{ top: "145px", left: "-8px" }}
-        />
-        <img
-          src={firebase}
-          alt=""
-          className="img-skills"
-          style={{ top: "195px", left: "178px" }}
-        />
+        <img src={js} alt="logo-js" className="img-skills" />
+        <img src={sass} alt="logo-sass" className="img-skills" />
+        <img src={react} alt="logo-recat" className="img-skills" />
+        <img src={firebase} alt="logo-firebase" className="img-skills" />
       </article>
       <div className="home-container-text">
         <h1 className="home-text-title">Roman De Rose</h1>
