@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import roman from "../assets/yo.jpg";
 import js from "../assets/js.png";
 import sass from "../assets/sass.png";
@@ -7,10 +8,17 @@ import react from "../assets/react.png";
 import firebase from "../assets/firebase.png";
 import "./Home.css";
 
+// AGREGAR FRAMER MOTION
+
 function Home() {
   return (
     <section className="home">
-      <article className="home-article">
+      <motion.article
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.4 }}
+        className="home-article"
+      >
         <img
           src={roman}
           alt="roman de rose frontend"
@@ -20,8 +28,13 @@ function Home() {
         <img src={sass} alt="logo-sass" className="img-skills" />
         <img src={react} alt="logo-recat" className="img-skills" />
         <img src={firebase} alt="logo-firebase" className="img-skills" />
-      </article>
-      <div className="home-container-text">
+      </motion.article>
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, type: "spring", delay: 0.5 }}
+        className="home-container-text"
+      >
         <h1 className="home-text-title">Roman De Rose</h1>
         <p className="home-text-description">Frontend Developer</p>
         <div className="home-text-descriptionPersonal">
@@ -35,7 +48,7 @@ function Home() {
           </p>
         </div>
         <Link to="/projects">proyectos</Link>
-      </div>
+      </motion.div>
     </section>
   );
 }

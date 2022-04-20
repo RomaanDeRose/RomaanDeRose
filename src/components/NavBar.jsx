@@ -1,9 +1,12 @@
 import { React, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "./NavBar.css";
+
+// AGREGAR FRAMER MOTION
 
 function NavBar() {
   const [navMenu, setNavMenu] = useState(false);
@@ -11,7 +14,12 @@ function NavBar() {
   const toggleNavMenu = () => setNavMenu(!navMenu);
 
   return (
-    <header className="header">
+    <motion.header
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="header"
+    >
       <nav className="navbar">
         <FontAwesomeIcon
           icon={faBars}
@@ -71,7 +79,7 @@ function NavBar() {
           </NavLink>
         </ul>
       </div>
-    </header>
+    </motion.header>
   );
 }
 
