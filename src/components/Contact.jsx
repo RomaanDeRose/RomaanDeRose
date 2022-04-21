@@ -7,27 +7,27 @@ function Contact() {
     <section className="contact">
       <form className="contact-form" action="">
         <motion.input
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.4, type: "spring" }}
+          initial={{ opacity: 0, x: 250 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, type: "spring" }}
           className="contact-input"
           type="text"
           placeholder="Nombre"
           required
         />
         <motion.input
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.4, type: "spring", delay: 0.2 }}
+          initial={{ opacity: 0, x: -250 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, type: "spring", delay: 0.2 }}
           className="contact-input"
           type="email"
           placeholder="Email"
           required
         />
         <motion.textarea
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.4, type: "spring", delay: 0.4 }}
+          initial={{ opacity: 0, x: 250 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, type: "spring", delay: 0.4 }}
           className="contact-input textarea"
           name=""
           id=""
@@ -39,7 +39,7 @@ function Contact() {
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 0.4, type: "spring", delay: 0.7 }}
+          transition={{ duration: 0.8, type: "spring", delay: 0.6 }}
         >
           <button className="contact-button" type="submit">
             Enviar

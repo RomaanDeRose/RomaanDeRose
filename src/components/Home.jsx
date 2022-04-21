@@ -32,7 +32,7 @@ function Home() {
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, type: "spring", delay: 0.5 }}
+        transition={{ duration: 1, type: "spring", delay: 0.4 }}
         className="home-container-text"
       >
         <h1 className="home-text-title">Roman De Rose</h1>
