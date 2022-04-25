@@ -49,6 +49,7 @@
   height: 125px;
   font-size: 1.4rem;
   font-weight: 500;
+  resize: none;
 }
 .contact .textarea::placeholder {
   color: var(--color-yellow);
