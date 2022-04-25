@@ -1,11 +1,11 @@
-h2 {
+.projects h2 {
   text-align: center;
   font-size: 3.2rem;
   color: var(--color-yellow);
   font-weight: 700;
-  margin-bottom: -2.8rem;
+  margin-bottom: -2.2rem;
 }
-h2 span {
+.projects h2 span {
   color: var(--color-ligthblue);
   font-size: 3.5rem;
 }
@@ -16,16 +16,19 @@ h2 span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3.4rem;
   margin: 0 auto;
   padding: 3.5rem 0rem;
 }
 
 @media screen and (min-width: 1024px) {
+  .projects h2 {
+    margin-top: -1rem;
+  }
   .container-projects {
     margin-top: 0.8rem;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 3.4rem;
   }
 }

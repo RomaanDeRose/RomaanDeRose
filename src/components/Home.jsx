@@ -30,8 +30,8 @@ function Home() {
         <img src={firebase} alt="logo-firebase" className="img-skills" />
       </motion.article>
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1, type: "spring", delay: 0.4 }}
         className="home-container-text"
       >

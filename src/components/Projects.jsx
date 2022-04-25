@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import gamesShop from "../assets/ecommerce.png";
 import Ruleta from "../assets/ruleta.png";
 import MathsApp from "../assets/maths-app.png";
@@ -13,7 +14,12 @@ import "./Projects.css";
 
 function Projects() {
   return (
-    <div>
+    <motion.section
+      initial={{ opacity: 0, y: -350 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring" }}
+      className="projects"
+    >
       <h2>
         Proyectos<span>.</span>
       </h2>
@@ -54,7 +60,7 @@ function Projects() {
           descriptionProject={"Ecommerce de artículos deportivos (HTML - CSS)"}
         />
       </div>
-    </div>
+    </motion.section>
   );
 }
 
